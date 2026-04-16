@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it using the metadata below."
+type: software
+title: "word-vector-explorer: A Shiny app for interactive visualisation of fastText word vectors"
+abstract: >
+  A Shiny application for the interactive exploration of fastText distributional
+  semantic models (DSMs). Words supplied by the user are retrieved from a
+  pre-trained fastText Common Crawl model and projected into two dimensions
+  using t-SNE. Supports seven languages (English, French, German, Spanish,
+  Italian, Chinese, Albanian). Includes model download, OOV detection, label
+  repulsion, and PNG export.
+authors:
+  - family-names: Desagulier
+    given-names: Guillaume
+    orcid: "https://orcid.org/0000-0002-8729-6242"
+    affiliation: "Université Bordeaux Montaigne / UR CLIMAS"
+repository-code: "https://github.com/GuillaumeDesa/word-vector-explorer"
+url: "https://corpling.hypotheses.org"
+license: CC-BY-NC-4.0
+version: "1.0.0"
+date-released: "2025-01-01"
+keywords:
+  - corpus linguistics
+  - distributional semantics
+  - word vectors
+  - word embeddings
+  - fastText
+  - t-SNE
+  - Shiny
+  - R
+  - natural language processing
+references:
+  - type: article
+    title: "Learning word vectors for 157 languages"
+    authors:
+      - family-names: Grave
+        given-names: Edouard
+      - family-names: Bojanowski
+        given-names: Piotr
+      - family-names: Gupta
+        given-names: Prakhar
+      - family-names: Joulin
+        given-names: Armand
+      - family-names: Mikolov
+        given-names: Tomas
+    year: 2018
+    notes: "arXiv:1802.06893"
+  - type: article
+    title: "Can word vectors help corpus linguists?"
+    authors:
+      - family-names: Desagulier
+        given-names: Guillaume
+    journal: "Studia Neophilologica"
+    volume: 91
+    issue: 2
+    start: 219
+    end: 240
+    year: 2019
+    doi: "10.1080/00393274.2019.1616220"
