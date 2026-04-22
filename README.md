@@ -17,12 +17,6 @@ Supported languages: **English, French, German, Spanish, Italian, Chinese, Alban
 
 ---
 
-## Screenshot
-
-*(Add a screenshot here once the app is running: `docs/screenshot.png`)*
-
----
-
 ## Requirements
 
 ### R version
