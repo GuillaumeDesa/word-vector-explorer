@@ -4,8 +4,6 @@ A Shiny application for the interactive visualisation of fastText distributional
 
 Companion to the blog series on distributional semantics at [Corpus Linguistics & Statistics with R](https://corpling.hypotheses.org).
 
----
-
 ## What it does
 
 - Downloads pre-trained fastText Common Crawl models directly from [fasttext.cc](https://fasttext.cc/docs/en/crawl-vectors.html) into a user-specified local folder
@@ -14,8 +12,6 @@ Companion to the blog series on distributional semantics at [Corpus Linguistics 
 - Exports the plot as a PNG with configurable resolution and dimensions
 
 Supported languages: **English, French, German, Spanish, Italian, Chinese, Albanian**
-
----
 
 ## Requirements
 
@@ -57,8 +53,6 @@ install.packages(c(
 
 Each fastText model requires approximately 7–8 GB of disk space once decompressed. Ensure the destination folder has sufficient space before downloading.
 
----
-
 ## Installation
 
 ```r
@@ -69,8 +63,6 @@ runApp("path/to/word-vector-explorer/app.R")
 ```
 
 The app opens in your default browser.
-
----
 
 ## Workflow
 
@@ -119,8 +111,6 @@ Recommended settings:
 - Print / paper appendix: 300 dpi, 10 × 7 in
 - Web / quick preview: 72 dpi, 10 × 7 in
 
----
-
 ## Technical notes
 
 ### Why fastText and not word2vec or BERT?
@@ -139,8 +129,6 @@ The `set.seed(42)` call in the plotting code ensures reproducibility: the same w
 
 Loading a fastText `.bin` model occupies approximately 7–8 GB of RAM. The app calls `gc()` before loading to release any previously held model. On machines with less than 16 GB of RAM, running other memory-intensive applications alongside the app is not recommended.
 
----
-
 ## File structure
 
 ```
@@ -155,16 +143,12 @@ word-vector-explorer/
 
 Model files (`.bin`, `.gz`) are excluded from version control via `.gitignore`. They must be downloaded separately through the app or directly from [fasttext.cc](https://fasttext.cc/docs/en/crawl-vectors.html).
 
----
-
 ## Limitations
 
 - **Type-based representations only.** The app visualises fastText Common Crawl vectors, which are static (one vector per word form). Context-sensitive variation within a word's usage is not captured.
 - **Training corpus bias.** The models reflect the distributional patterns of Wikipedia and Common Crawl. Results may not generalise to historical corpora, specialist registers, or non-standard varieties.
 - **Small word lists.** t-SNE requires at least 4 data points and becomes most informative with 15–100 words. Very large lists produce cluttered plots; hierarchical clustering or MCA is more appropriate in that regime.
 - **Local execution only.** The app is designed to run locally. It is not configured for deployment to shinyapps.io or a server, primarily because the model files cannot be bundled and the RAM requirements exceed standard cloud tiers.
-
----
 
 ## References
 
@@ -174,15 +158,11 @@ Mikolov, T., Grave, E., Bojanowski, P., Puhrsch, C., & Joulin, A. (2017). Advanc
 
 van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. *Journal of Machine Learning Research*, 9, 2579–2605.
 
----
-
 ## Related publications
 
 Desagulier, G. (2019). Can word vectors help corpus linguists? *Studia Neophilologica*, 91(2), 219–240. https://doi.org/10.1080/00393274.2019.1616220
 
 Desagulier, G. (2022). Changes in the midst of a construction network: a diachronic construction grammar approach to complex prepositions denoting internal location. *Cognitive Linguistics*, 33(2), 339–386. https://doi.org/10.1515/cog-2021-0128
-
----
 
 ## License
 
